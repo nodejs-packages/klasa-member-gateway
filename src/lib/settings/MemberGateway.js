@@ -1,4 +1,5 @@
 const { GatewayStorage, Settings, util: { getIdentifier } } = require('klasa');
+const { RequestHandler } = require('@klasa/request-handler');
 
 /**
  * The Gateway class that manages the data input, parsing, and output, of an entire database, while keeping a cache system sync with the changes.
@@ -20,7 +21,7 @@ class MemberGateway extends GatewayStorage {
 		 * @since 0.0.1
 		 * @type {WeakMap<string, Promise<external:Settings>>}
 		 */
-		this.syncMap = new WeakMap();
+		this.requestHandler = new RequestHandler(id => this.provider.get(this.name, id), ids => this.provider.getAll(this.name, ids));
 
 		/**
 		 * @since 0.0.1
