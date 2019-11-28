@@ -12,9 +12,9 @@ module.exports = class extends Client {
 	}
 
 	static [Client.plugin]() {
-		mergeDefault(CLIENT, this.options);
+		mergeDefault(CLIENT, this.options.settings);
 
-		const { members } = this.options.gateways;
+		const { members } = this.options.settings.gateways;
 		members.schema = 'schema' in members ? members.schema : this.constructor.defaultMemberSchema;
 		this.gateways.register(new MemberGateway(this, 'members', members));
 	}
