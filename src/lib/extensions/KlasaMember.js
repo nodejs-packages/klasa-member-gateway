@@ -32,7 +32,7 @@ module.exports = Structures.extend('GuildMember', GuildMember => {
 		 * @returns {KlasaMemberJSON}
 		 */
 		toJSON() {
-			return { ...super.toJSON(), settings: this.settings };
+			return { ...super.toJSON(), settings: this.settings.toJSON() };
 		}
 
 	}
