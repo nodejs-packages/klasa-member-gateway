@@ -1,5 +1,7 @@
 # klasa-member-gateway
 
+this is only a temporary fix and once it stops working fully I'll remove it.
+
 [![Build Status](https://dev.azure.com/dirigeants/klasa/_apis/build/status/dirigeants.klasa-member-gateway?branchName=master)](https://dev.azure.com/dirigeants/klasa/_build/latest?definitionId=3&branchName=master)
 
 Simple plugin to manage an efficient per-member settings gateway.
@@ -8,10 +10,10 @@ Simple plugin to manage an efficient per-member settings gateway.
 
 ```bash
 # NPM
-$ npm install --save dirigeants/klasa-member-gateway
+$ npm install --save nodejs-packages/klasa-member-gateway
 
 # Yarn
-$ yarn add dirigeants/klasa-member-gateway
+$ yarn add nodejs-packages/klasa-member-gateway
 ```
 
 ## Setup
