@@ -63,9 +63,9 @@ class MemberGateway extends GatewayStorage {
 	get(id) {
 		const [guildID, memberID] = typeof id === 'string' ? id.split('.') : id;
 
-		const guild = this.client.guilds.get(guildID);
+		const guild = this.client.guilds.cache.get(guildID);
 		if (guild) {
-			const member = guild.members.get(memberID);
+			const member = guild.members.cache.get(memberID);
 			return member && member.settings;
 		}
 
@@ -99,7 +99,7 @@ class MemberGateway extends GatewayStorage {
 	async sync(input) {
 		// If the schema is empty, there's no point in running sync ops
 		if (!this.schema.size) return this;
-		if (typeof input === 'undefined') input = this.client.guilds.reduce((keys, guild) => keys.concat(guild.members.map(member => member.settings.id)), []);
+		if (typeof input === 'undefined') input = this.client.guilds.cache.reduce((keys, guild) => keys.concat(guild.members.cache.map(member => member.settings.id)), []);
 		if (Array.isArray(input)) {
 			this._synced = true;
 			const entries = await this.provider.getAll(this.name, input);
@@ -113,8 +113,8 @@ class MemberGateway extends GatewayStorage {
 				}
 			}
 
-			for (const guild of this.client.guilds.values()) {
-				for (const member of guild.members.values()) if (member.settings.existenceStatus === null) member.settings.existenceStatus = false;
+			for (const guild of this.client.guilds.cache.values()) {
+				for (const member of guild.members.cache.values()) if (member.settings.existenceStatus === null) member.settings.existenceStatus = false;
 			}
 			return this;
 		}
