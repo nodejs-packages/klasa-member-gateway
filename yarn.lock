@@ -338,6 +338,10 @@
   dependencies:
     arrify "^1.0.1"
 
+"@klasa/request-handler@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@klasa/request-handler/-/request-handler-0.0.3.tgz#ed72de611ece3dd99725cb797fc13e07bb05e618"
+
 "@types/node@^11.13.4":
   version "11.13.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.4.tgz#f83ec3c3e05b174b7241fadeb6688267fe5b22ca"
@@ -351,8 +355,8 @@ acorn-jsx@^5.0.0:
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.0.1.tgz#32a064fd925429216a09b141102bfdd185fae40e"
 
 acorn@^6.0.7:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.0.tgz#b0a3be31752c97a0f7013c5f4903b71a05db6818"
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
 
 ajv@^6.9.1:
   version "6.9.1"
