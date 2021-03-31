@@ -338,6 +338,10 @@
   dependencies:
     arrify "^1.0.1"
 
+"@klasa/request-handler@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@klasa/request-handler/-/request-handler-0.0.3.tgz#ed72de611ece3dd99725cb797fc13e07bb05e618"
+
 "@types/node@^11.13.4":
   version "11.13.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.4.tgz#f83ec3c3e05b174b7241fadeb6688267fe5b22ca"
@@ -3973,8 +3977,8 @@ xtend@^4.0.0, xtend@^4.0.1:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 
 y18n@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.1.tgz#8db2b83c31c5d75099bb890b23f3094891e247d4"
 
 yallist@^2.1.2:
   version "2.1.2"
